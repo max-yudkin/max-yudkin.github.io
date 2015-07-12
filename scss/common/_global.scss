@@ -1,0 +1,17 @@
+html, body
+{
+    height: 100%;
+}
+
+body {
+  background-color: $body_bg_color;
+}
+
+a {
+  color: $brand_text_color;
+  text-decoration: underline;
+  outline: none;
+  &:hover {
+    color: red;
+  }
+}

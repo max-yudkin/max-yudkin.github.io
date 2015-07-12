@@ -1,0 +1,10 @@
+@import "bootstrap";
+@import "common/variables";
+// cleaners and etc
+@import "common/normalize";
+// site global styles
+@import "common/global";
+// main page, brand styles
+@import "parts/main-page";
+// footer
+@import "parts/footer";

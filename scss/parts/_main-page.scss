@@ -1,0 +1,66 @@
+.brand-container {
+  @include container-fixed();
+  @include gradient-striped();
+  height: 82%;
+  padding-bottom: 20px;
+  background-color: $main_color;
+  .simple-menu {
+    @include make-row(-30px);
+    ul {
+      @extend .ul-unstyle;
+      margin-top: 10px;
+      li {
+        display: inline-block;
+        padding: 5px 10px;
+      }
+    }
+  }
+  .start-search {
+    text-align: center;
+    margin-top: 75px;
+    h1 {
+      color: $brand_text_color;
+      text-transform: uppercase;
+      margin: 4px;
+    }
+    .search-info {
+      color: $brand_text_color;
+      font-size: 16px;
+    }
+    .search-box {
+      @include center-block();
+      @include gradient-vertical($brand_gradient_start, $main_darken_color);
+      @include border-left-radius(8px);
+      @include border-right-radius(50px);
+      margin-top: 30px;
+      padding: 10px;
+      width: 65%;
+      border-left: 1px $main_darken_color;
+      border-right: 1px solid $main_darken_color;
+      border-bottom: 3px solid #DBAE26;
+
+      input, button {
+        height: 31px;
+      }
+      input {
+        width: 85%;
+      }
+      button {
+        @include gradient-vertical($brand_gradient_start, $main_darken_color);
+        @include border-left-radius(8px);
+        @include border-right-radius(50px);
+        border: 1px solid #DBAE26;
+        border-bottom-width: 2px;
+        width: 14%;
+        outline:none;
+        &:hover {
+          background-color: #FFF35F !important;
+          background-image: none;
+        }
+        &:active {
+          @include gradient-vertical($main_darken_color, $brand_gradient_start);
+        }
+      }
+    }
+  }
+}
